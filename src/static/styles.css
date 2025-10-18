@@ -16,16 +16,75 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
 }
 
-header h1 {
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
   margin-bottom: 10px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-icon {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.user-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.auth-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.auth-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 main {
@@ -190,6 +249,89 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1a237e;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.student-view {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  text-align: center;
+  color: #666;
+}
+
+.student-view p {
+  margin-bottom: 10px;
+}
+
+/* Responsive design for header */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
 }
 
 footer {
